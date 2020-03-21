@@ -44,7 +44,7 @@ public class UserController {
     @RequestMapping("demoList")
     public String demo2(Model model) {
         List<User> userList = new ArrayList<>();
-        userList.add(new User(1, "Tom", 30));
+        userList.add(new User(1, "Tom", 32));
         userList.add(new User(2, "Jerry", 29));
         userList.add(new User(3, "Nancy", 27));
         model.addAttribute("userList", userList);
