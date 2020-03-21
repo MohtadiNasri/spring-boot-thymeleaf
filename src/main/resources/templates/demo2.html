@@ -5,6 +5,7 @@
     <title>Thymeleaf Demo</title>
 </head>
 <body>
+
 <h3>Thymeleaf Loop</h3>
 <table>
     <tr>
@@ -19,5 +20,15 @@
     </tr>
 </table>
 
+<h3>Thymeleaf Scope</h3>
+Request: <span th:text="${#httpServletRequest.getAttribute('request')}"></span><br/>
+Session: <span th:text="${session.session}"></span><br/>
+Application: <span th:text="${application.application}"></span><br/>
+
+<h3>Thymeleaf URLs</h3>
+<!-- redirect to demo page without parameter -->
+<a th:href="@{~/demoList}">Visit Demo Page</a> <br />
+<!-- redirect to demo page with parameter -->
+<a th:href="@{https://www.thymeleaf.org/doc/tutorials/2.1/usingthymeleaf.html}">Visit Thymmeleaf</a>
 </body>
 </html>
